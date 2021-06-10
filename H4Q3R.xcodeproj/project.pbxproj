@@ -13,6 +13,10 @@
 		5742CBFB266E2F7F00239099 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5742CBFA266E2F7F00239099 /* Preview Assets.xcassets */; };
 		5742CC06266E2F7F00239099 /* H4Q3RTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742CC05266E2F7F00239099 /* H4Q3RTests.swift */; };
 		5742CC11266E2F7F00239099 /* H4Q3RUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742CC10266E2F7F00239099 /* H4Q3RUITests.swift */; };
+		5742CC20266E324900239099 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742CC1F266E324900239099 /* NetworkManager.swift */; };
+		5742CC22266E35FD00239099 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742CC21266E35FD00239099 /* PostData.swift */; };
+		5742CC25266E3C6A00239099 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742CC24266E3C6A00239099 /* DetailView.swift */; };
+		5742CC27266E40C000239099 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742CC26266E40C000239099 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,11 @@
 		5742CC0C266E2F7F00239099 /* H4Q3RUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = H4Q3RUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5742CC10266E2F7F00239099 /* H4Q3RUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4Q3RUITests.swift; sourceTree = "<group>"; };
 		5742CC12266E2F7F00239099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5742CC1F266E324900239099 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5742CC21266E35FD00239099 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		5742CC24266E3C6A00239099 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5742CC26266E40C000239099 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		576C4FE82670AA4D0075AC7B /* H4Q3R.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = H4Q3R.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +104,10 @@
 		5742CBF2266E2F7D00239099 /* H4Q3R */ = {
 			isa = PBXGroup;
 			children = (
+				576C4FE82670AA4D0075AC7B /* H4Q3R.entitlements */,
+				5742CC23266E3C4F00239099 /* Views */,
+				5742CC1E266E323700239099 /* Models */,
 				5742CBF3266E2F7D00239099 /* H4Q3RApp.swift */,
-				5742CBF5266E2F7D00239099 /* ContentView.swift */,
 				5742CBF7266E2F7F00239099 /* Assets.xcassets */,
 				5742CBFC266E2F7F00239099 /* Info.plist */,
 				5742CBF9266E2F7F00239099 /* Preview Content */,
@@ -128,6 +139,25 @@
 				5742CC12266E2F7F00239099 /* Info.plist */,
 			);
 			path = H4Q3RUITests;
+			sourceTree = "<group>";
+		};
+		5742CC1E266E323700239099 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5742CC1F266E324900239099 /* NetworkManager.swift */,
+				5742CC21266E35FD00239099 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5742CC23266E3C4F00239099 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5742CBF5266E2F7D00239099 /* ContentView.swift */,
+				5742CC24266E3C6A00239099 /* DetailView.swift */,
+				5742CC26266E40C000239099 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5742CC20266E324900239099 /* NetworkManager.swift in Sources */,
+				5742CC22266E35FD00239099 /* PostData.swift in Sources */,
 				5742CBF6266E2F7D00239099 /* ContentView.swift in Sources */,
+				5742CC27266E40C000239099 /* WebView.swift in Sources */,
+				5742CC25266E3C6A00239099 /* DetailView.swift in Sources */,
 				5742CBF4266E2F7D00239099 /* H4Q3RApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = H4Q3R/H4Q3R.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4Q3R/Preview Content\"";
 				DEVELOPMENT_TEAM = FC5NB44AQ2;
@@ -429,6 +464,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.markdaquis.H4Q3R;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = H4Q3R/H4Q3R.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4Q3R/Preview Content\"";
 				DEVELOPMENT_TEAM = FC5NB44AQ2;
@@ -451,6 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.markdaquis.H4Q3R;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
